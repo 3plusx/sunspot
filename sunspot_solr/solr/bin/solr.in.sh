@@ -33,6 +33,9 @@ SOLR_HEAP="512m"
 #-XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime"
 
 # These GC settings have shown to work well for a number of common Solr workloads
+
+# Disabled due to compatibility issues with newer Openjdk versions (like openjdk-17 which comes with Debian Bookworm)
+# Don't use this in productive contexts :)
 GC_TUNE="-XX:NewRatio=3 \
 -XX:SurvivorRatio=4 \
 -XX:TargetSurvivorRatio=90 \
